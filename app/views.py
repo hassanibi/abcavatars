@@ -55,6 +55,7 @@ class AvatarView(View):
             args.update({'width': str(size), 'height': str(size)})
             args.update({'font-size': str(size * 0.5)})
         if font_size:
+            size = int(args.get('width'))
             font_size = float(font_size)
             if font_size < 0.1:
                 font_size = 0.1
